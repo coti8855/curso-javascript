@@ -31,4 +31,21 @@ else if (codigo > 999){
 else{
 	console.log ("codigo incorrecto");
 }
+	var i=0;
+
+for (var i = 0 ; i < 5; i++) {
+	let nombreUsuario = prompt ("Ingrese su nombre completo");
+	let voto = prompt ("ingrese su voto");
+	console.log (nombreUsuario)
+	console.log (voto)
+  }
+
+	let nombreUsuario3 = prompt ("ingrse su nombre de nuevo");
+do{
+  var codigoDeEntrada = prompt ("ingrese su codigo");
+  var nombreUsuario2 = prompt ("ingrse su nombre de nuevo");
+
+  console.log (nombreUsuario2);
+  console.log (codigoDeEntrada);
+} while (nombreUsuario2 != "Salir")
 
