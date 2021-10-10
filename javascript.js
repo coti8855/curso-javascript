@@ -1,4 +1,6 @@
 
+
+
 function convertirSegundos (minutos) {
 	 let segundos = minutos * 60
 	 console.log ("el resultado en segundos es" + segundos)
@@ -27,6 +29,11 @@ else if (edadPelicula < 13 && acompañadoTutor == "No"||acompañadoTutor == "no"
   console.log ("no puede ver pelicula")
 }
 
+
+
+
+
+/* DESAFIO numero 4*/
 
 let costoProducto = parseInt (prompt ("Ingrese el costo del producto"))
 console.log ("costo producto " + costoProducto)
@@ -107,8 +114,6 @@ else {
 
 
 
-
-
 let numero = parseInt (prompt ("ingresar codigo"))
 let usuario = prompt ("ingrese usuario")
 
@@ -140,3 +145,58 @@ if (login(validarUsuario (usuario)), validarCodigo(numero)){
 
 
 
+
+/* DESAFIO numero 5*/
+
+class Productos {
+ 	constructor ( nombre, stock, valor ){
+ 	this.nombre = nombre
+ 	this.stock = stock
+ 	this.valor = valor
+
+ }
+ saludar() {
+  console.log ("El producto es " + this.nombre)
+ }
+ hayStock (){
+ 	return this.stock;
+ }
+ restaDelStock (){
+  return this.stock = this.stock - 1
+ }
+ noHayStock (){
+ 	if (this.stock == 0){
+ 		return true
+ 	}else {
+ 		return false
+ 	}
+ }
+ }
+
+ let producto1 = new Productos ("fideos", 4, 110);
+ let producto2 = new Productos ("arroz", 29, 80);
+ producto1.saludar();
+ producto2.saludar();
+ console.log (producto1.hayStock()) 
+ console.log (producto1.restaDelStock()) 
+ console.log (producto1.restaDelStock())
+ console.log (producto1.restaDelStock())
+ console.log (producto1.restaDelStock())
+ console.log (producto1.restaDelStock())
+ console.log (producto1.restaDelStock())
+
+if (producto1.noHayStock()){
+   	console.log ("no hay stock")
+   }
+
+
+let EfectivoPago = prompt ("Desea pagar en efectivo si o no")
+let precioFinal = parseInt (prompt ("Ingrese el costo final"))
+ function descuentoProducto (efectivo, precio){
+  if (efectivo == "Si"){
+  	return  precio = precio - precio * 0.2
+  }
+ }
+ 
+ console.log ("El precio con descuento queda a " + descuentoProducto(EfectivoPago, precioFinal))
+ 
