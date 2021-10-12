@@ -1,3 +1,46 @@
+/* DESAFIO numero 5*/
+
+class Productos {
+  constructor ( nombre, stock, valor ){
+  this.nombre = nombre
+  this.stock = stock
+  this.valor = valor
+
+ }
+  nombreProduc() {
+  console.log ("El producto es " + this.nombre)
+ }
+ hayStock (){
+  return this.stock;
+ }
+ restaDelStock (){
+  return this.stock = this.stock - 1
+ }
+ noHayStock (){
+  if (this.stock == 0){
+    return true
+  }else {
+    return false
+  }
+ }
+ }
+
+ let producto1 = new Productos ("fideos", 4, 110);
+ let producto2 = new Productos ("arroz", 29, 80);
+ producto1.nombreProduc();
+ producto2.nombreProduc();
+ console.log (producto1.hayStock()) 
+ console.log (producto1.restaDelStock()) 
+ console.log (producto1.restaDelStock())
+ console.log (producto1.restaDelStock())
+ console.log (producto1.restaDelStock())
+ console.log (producto1.restaDelStock())
+ console.log (producto1.restaDelStock())
+
+if (producto1.noHayStock()){
+    console.log ("no hay stock")
+   }
+
 
 /*desafio 6*/
 class nombreProductos{
