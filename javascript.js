@@ -47,12 +47,11 @@ class nombreProductos{
   constructor (nombre, productos, precio, efectivo){
    this.nombre = nombre;
    this.productos = productos;
-   this.precio = precio;
+   this.precio = parseInt (precio);
    this.efectivo = efectivo;
   }
 }
 let arregloProductos = [];
-let sumaProductos = []
 
   let productos = parseInt (prompt ("ingrese cantidad de productos"))
   let efectivo = prompt ("pago efectivo")
@@ -60,11 +59,21 @@ let sumaProductos = []
 for( let i = 0; i < productos ; i++){
   let nombre = prompt ("ingrese nombre del articulo")
   let precio = parseInt (prompt ("Ingrese precio del producto"))
-  let suma = precio
-  sumaProductos.push (precio)
   arregloProductos.push(new nombreProductos (nombre, productos, precio, efectivo));
 }
 
+arregloProductos.sort(  function (precio3,precio1  ) {
 
-console.log (arregloProductos)
-console.log (sumaProductos)
+            if (precio3.precio > precio1.precio) { 
+              return 1;
+            } else if (precio3.precio < precio1.precio) {
+              return -1;
+            } else {
+                return 0;
+            }
+
+          }); console.log(arregloProductos); 
+              
+
+
+
