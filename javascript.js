@@ -1,79 +1,63 @@
-/* DESAFIO numero 5*/
 
-class Productos {
-  constructor ( nombre, stock, valor ){
-  this.nombre = nombre
-  this.stock = stock
-  this.valor = valor
 
- }
-  nombreProduc() {
-  console.log ("El producto es " + this.nombre)
- }
- hayStock (){
-  return this.stock;
- }
- restaDelStock (){
-  return this.stock = this.stock - 1
- }
- noHayStock (){
-  if (this.stock == 0){
-    return true
-  }else {
-    return false
+
+function validar2 (){
+  let password = document.getElementById ("pass")
+  if ( password.value == "123"){
+    let parrafo = document.createElement ("p")
+    parrafo.innerHTML = "bienvenido al sistema"
+    parrafo.style.color = "red"
+    parrafo.style.textAlign = "center"
+    console.log (parrafo)
+    let mensaje = document.getElementById ("mensaje")
+    mensaje.appendChild ( parrafo )
   }
- }
- }
+} 
 
- let producto1 = new Productos ("fideos", 4, 110);
- let producto2 = new Productos ("arroz", 29, 80);
- producto1.nombreProduc();
- producto2.nombreProduc();
- console.log (producto1.hayStock()) 
- console.log (producto1.restaDelStock()) 
- console.log (producto1.restaDelStock())
- console.log (producto1.restaDelStock())
- console.log (producto1.restaDelStock())
- console.log (producto1.restaDelStock())
- console.log (producto1.restaDelStock())
-
-if (producto1.noHayStock()){
-    console.log ("no hay stock")
-   }
+function agregarLista(){
 
 
-/*desafio 6*/
-class nombreProductos{
-  constructor (nombre, productos, precio, efectivo){
-   this.nombre = nombre;
-   this.productos = productos;
-   this.precio = parseInt (precio);
-   this.efectivo = efectivo;
-  }
-}
-let arregloProductos = [];
+    let lista = document.getElementById("lista");
+    let producto = document.getElementById("producto").value;
 
-  let productos = parseInt (prompt ("ingrese cantidad de productos"))
-  let efectivo = prompt ("pago efectivo")
+    let li = document.createElement("li");
+    li.innerHTML = producto;
 
-for( let i = 0; i < productos ; i++){
-  let nombre = prompt ("ingrese nombre del articulo")
-  let precio = parseInt (prompt ("Ingrese precio del producto"))
-  arregloProductos.push(new nombreProductos (nombre, productos, precio, efectivo));
+    lista.appendChild(li);
+
+
 }
 
-arregloProductos.sort(  function (precio3,precio1  ) {
 
-            if (precio3.precio > precio1.precio) { 
-              return 1;
-            } else if (precio3.precio < precio1.precio) {
-              return -1;
-            } else {
-                return 0;
-            }
+function eliminarLista(){
 
-          }); console.log(arregloProductos); 
-              
+    let lista = document.getElementById("lista");
+    lista.removeChild( lista.LastChild);
 
 
+}
 
+function carrito(){
+  let lista2 = document.getElementById ("lista2")
+  let producto2 = document.getElementById ("producto2").value;
+  let li2 = document.createElement ("li")
+  li2.innerHTML = ("has agregado " + producto2 + " al carrito")
+  lista2.appendChild(li2)
+}
+
+function stock (){
+  let parrafo2 = document.getElementById("parrafo2")
+  let cantidad = document.getElementById ("cantidad").value
+  if (cantidad == "10" ){
+    let parrafoNuevo = document.createElement ("p")
+    parrafoNuevo.innerHTML = ("no hay suficiente stock")
+    parrafo2.appendChild (parrafoNuevo)
+
+  } else{
+    let parrafoNuevo2 = document.createElement ("p")
+    parrafoNuevo2.innerHTML = ("hay suficiente stock")
+    parrafo2.appendChild (parrafoNuevo2)
+
+  }
+
+}

@@ -33,9 +33,9 @@
 
 
     <section class="servicio_fondo">
-         <h2 class="otrotitulo2">¿Que ofrecemos?</h2>
+         <h2 id="usuario" >¿Que ofrecemos?</h2>
      <div class="parrafos">
-         <p class="parrafonosotras2"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+         <p class="parrafonosotras2" > Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
@@ -51,10 +51,30 @@
      </div>
     </section>
 
-     
-        
+     <div>
+         <input type="number" id="pass" >
+     <button onclick="validar2()">Enviar</button>
+     <div id="mensaje">
+         
+     </div>
+     <div id="contenedor">
+        <ul id="lista"></ul>
+       <input type="text" id="producto">
+       <button onclick="agregarLista()">agregar</button>
+       <button onclick="eliminarLista()">eliminar</button>
+     </div>
 
-    <footer class="footer">
+     <div>
+    <ul id="lista2"></ul>
+    <input type="text" id="producto2">
+    <button onclick="carrito()">agregar al carrito</button>
+       </div>   
+       <div>
+           <div id="parrafo2"></div>
+           <input type="number" id="cantidad">
+           <button onclick="stock ()">comprobar</button>
+       </div>
+        <footer class="footer">
         <h3>NUESTRAS REDES</h3>
         <a href="" class="redes">Instagram</a>
         <a href=""class="redes">Facebook</a>
